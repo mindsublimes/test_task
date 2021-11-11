@@ -1,0 +1,20 @@
+<div class="container job-page">
+  <div class="row custom-row">
+    <div class="text-center">
+      <%= link_to "Sign Out" , sign_out_users_path, class:"logout-btn"%>
+    </div>
+    <div class="custom-form">
+      <h1 class="heading-align">New Job</h1>
+        <%= form_for @job do |form| %>
+          <%= form.text_field :job_title ,class:"input-custom", placeholder:"Job Title"%>
+          <%= form.text_field :job_description ,class:"input-custom", placeholder:"Job Description"%>
+          <%= form.number_field :no_of_posts, min: 1 ,class:"input-custom", placeholder:"Number of Posts"%>
+          <%= form.select :status, options_for_select(Job.statuses.map{|key,value|[key,key]} ) , class:"select" %>
+          <%= form.select :priority, options_for_select(Job.priorities.map{|key,value|[key,key]} ) , class:"select" %>
+          <%= form.datetime_field :queue_time ,class:"input-custom data-field", placeholder:"Queue Time"%>
+          <%= form.submit "Create Job" , class:"submit-btn"%>
+        <% end %>
+    </div>
+  </div>
+</div>
+

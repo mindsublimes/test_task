@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row custom-row">
+    <div class="custom-form">
+      <h1 class="heading-align">Sign In</h1>
+        <%= form_with url: sign_in_user_users_path do |f| %>
+          <%= f.email_field :email ,class:"input-custom", placeholder:"Email"%>
+          <%= f.password_field :password ,class:"input-custom", placeholder:"Password"%>
+          <%= f.submit "Sign In" , class:"submit-btn"%>
+        <% end %>
+    </div>
+  </div>
+</div>
+
+

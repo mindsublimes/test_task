@@ -1,0 +1,34 @@
+<div class="container job-page">
+  <div class="row custom-row">
+    <div class="text-center">
+      <%= link_to "Sign Out" , sign_out_users_path, class:"logout-btn"%>
+      <%= link_to "New Job" , new_job_path, class:"logout-btn"%>
+    </div>
+    <h1>Jobs Index</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Job Title</th>
+          <th>Job Status</th>
+          <th>Job Priority</th>
+          <th>Queue Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%@jobs.each do |job|  %>
+          <tr>
+            <td><%= job.job_title %></td>
+            <td><%= job.status %></td>
+            <td><%= job.priority %></td>
+            <td><%= job.queue_time&.strftime("%H:%M") %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+

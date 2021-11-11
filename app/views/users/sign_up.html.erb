@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row custom-row">
+    <div class="custom-form">
+      <h1 class="heading-align">Sign Up</h1>
+        <%= form_for @user, url: users_path, method: :post do |form| %>
+          <%= form.email_field :email ,class:"input-custom", placeholder:"Email"%>
+          <%= form.password_field :password ,class:"input-custom", placeholder:"Password"%>
+          <%= form.password_field :confirm_password ,class:"input-custom", placeholder:"Confirm Password"%>
+          <%= form.submit "Sign Up" , class:"submit-btn"%>
+        <% end %>
+    </div>
+  </div>
+</div>
+
+

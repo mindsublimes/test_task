@@ -1,0 +1,55 @@
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+select {
+  width: 86%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 4px;
+  background: none;
+  color: #191d22c2;
+
+}
+
+.data-field {
+  color: #191d22c2;
+}
+
+.logout-btn {
+  background: #3a5cd9;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: right;
+  margin-right: 23px;
+  margin-top: 26px;
+}
+
+input:focus {
+    outline:none;
+}
+select:focus {
+   outline: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 55px;
+  width: 67%;
+  border: 1px solid #f2f2f2;
+  margin-top: 55px;
+  margin: auto;
+}
+
+
+
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
