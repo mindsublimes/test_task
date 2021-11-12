@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  # before_action :authenticate_user!
   def index
     @jobs= Job.order(priority: :asc)
   end
@@ -30,13 +31,7 @@ class JobsController < ApplicationController
     if @results["statuscode"] == 200
       session[:user] = @results["user"]
       # flash[:success]  =  @results["message"]
-      redirect_to jobs_path
-    # else
-      # flash[:alert]    =  @results["message"]
-      # redirect_to sign_up_users_path(@results)
     end
-
+    redirect_to jobs_path
   end
-
-
 end

@@ -8,6 +8,9 @@
           <%= form.password_field :confirm_password ,class:"input-custom", placeholder:"Confirm Password"%>
           <%= form.submit "Sign Up" , class:"submit-btn"%>
         <% end %>
+        <div class="signup-path">
+          <span>Already have Account? <%= link_to "Sign In", sign_in_users_path %> </span>
+        </div>
     </div>
   </div>
 </div>

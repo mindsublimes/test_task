@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
 
   resources :jobs
+  root to: "users#sign_in"
 end

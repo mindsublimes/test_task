@@ -67,4 +67,5 @@ class UsersController < ApplicationController
     # redirect_to new_registrations_path(@results)
   end
 
+
 end

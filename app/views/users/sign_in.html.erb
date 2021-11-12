@@ -7,6 +7,9 @@
           <%= f.password_field :password ,class:"input-custom", placeholder:"Password"%>
           <%= f.submit "Sign In" , class:"submit-btn"%>
         <% end %>
+        <div class="signup-path">
+          <span>Create Account? <%= link_to "Sign Up", sign_up_users_path %> </span>
+        </div>
     </div>
   </div>
 </div>

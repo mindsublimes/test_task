@@ -20,6 +20,7 @@ class OurWorker
   end
 
   def perform_job(job)
+    job.update(status: "done")
     5.times.each do |count|
       Movie.create(movie_name: job.job_title)
     end
